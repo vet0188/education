@@ -13,9 +13,12 @@ public class Z {
 
         ClassA obj = new ClassA();
         obj.hello();
+        Arrays ArrayPractice = new Arrays();
+        int [] testArr = {2,5,7,14};
+        ArrayPractice.ArrayElementsSum(testArr);
 
-        StringPractice Str = new StringPractice(" Hello my dear and my friend! hello", "Goodbye my dear Friend!", 4);
-        Str.remSpaces();
+//        StringPractice Str = new StringPractice(" Hello my dear and my friend! hello", "Goodbye my dear Friend!", 4);
+//        Str.remSpaces();
 //        Str.wordCount();
 //        Str.duplicates();
 //        Str.palendrome("madama");
