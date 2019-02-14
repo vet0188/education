@@ -186,5 +186,4 @@ public class StringPractice {
         System.out.println("New string: " + output + "\n" + (a.length()-output.length()) + "spaces removed");
     }
 
-
 }
