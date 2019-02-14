@@ -14,8 +14,10 @@ public class Z {
         ClassA obj = new ClassA();
         obj.hello();
         Arrays ArrayPractice = new Arrays();
-        int [] testArr = {2,5,7,14};
+        int [] testArr = {2,5,7,14,8,0,38,47,155,6};
         ArrayPractice.ArrayElementsSum(testArr);
+        ArrayPractice.FindLowHight(testArr);
+        ArrayPractice.FindSecondLowHight(testArr);
 
 //        StringPractice Str = new StringPractice(" Hello my dear and my friend! hello", "Goodbye my dear Friend!", 4);
 //        Str.remSpaces();
