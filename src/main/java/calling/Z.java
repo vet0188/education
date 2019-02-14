@@ -3,7 +3,7 @@ package calling;
 import pkg_1.*;
 
 import java.util.Scanner;
-// test fot account settings in Intellij IDEA
+
 
 public class Z {
     public static void main(String[] args){
