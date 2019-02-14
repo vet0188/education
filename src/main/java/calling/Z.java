@@ -4,6 +4,7 @@ import pkg_1.*;
 
 import java.util.Scanner;
 
+//hh
 public class Z {
     public static void main(String[] args){
         double  z;
@@ -14,10 +15,14 @@ public class Z {
         ClassA obj = new ClassA();
         obj.hello();
         Arrays ArrayPractice = new Arrays();
-        int [] testArr = {2,5,7,14,8,0,38,47,155,6};
+        int [] testArr = {2,5,155,7,47,14,8,0,38,6};
+        String [] testArr2 = {"123","3hn", "aaa", "BBB", "month", "123", "rfs", "123"};
         ArrayPractice.ArrayElementsSum(testArr);
         ArrayPractice.FindLowHight(testArr);
         ArrayPractice.FindSecondLowHight(testArr);
+        ArrayPractice.Contains(testArr2, "12");
+        ArrayPractice.EvenOdd(testArr);
+        ArrayPractice.Sort(testArr, false);
 
 //        StringPractice Str = new StringPractice(" Hello my dear and my friend! hello", "Goodbye my dear Friend!", 4);
 //        Str.remSpaces();
