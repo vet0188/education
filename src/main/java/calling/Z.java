@@ -1,6 +1,7 @@
 package calling;
 
 import pkg_1.*;
+import Practice.*;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -15,8 +16,11 @@ public class Z {
 
         ClassA obj = new ClassA();
         obj.hello();
-        FileHandling fh = new FileHandling();
-        fh.writeToFileBuffered("/Users/vitaliy_khairutdinov/IdeaProjects/id_01", "file_for_writing_test.txt", "write one more line");
+        FilePractice fp = new FilePractice("/Users/vitaliy_khairutdinov/IdeaProjects/id_01", "file_1.txt", "file_2.txt", "result.txt");
+        fp.readOneWriteAnother();
+
+//        FileHandling fh = new FileHandling();
+//        fh.writeToFileBuffered("/Users/vitaliy_khairutdinov/IdeaProjects/id_01", "file_for_writing_test.txt", "write one more line");
 //        fh.writeToFile("/Users/vitaliy_khairutdinov/IdeaProjects/id_01", "file_for_writing_test.txt", "write line");
 //        fh.readFromFileBuffered("/Users/vitaliy_khairutdinov/Desktop/", "help_text.txt");
 //        fh.readFromFile("doesnot matter", "any");

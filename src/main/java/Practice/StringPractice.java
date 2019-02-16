@@ -1,4 +1,4 @@
-package pkg_1;
+package Practice;
 
 import java.util.ArrayList;
 import java.util.List;
