@@ -2,11 +2,12 @@ package calling;
 
 import pkg_1.*;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 //hh
 public class Z {
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException {
         double  z;
         int x;
         int [] a = {2, 8};
@@ -14,15 +15,21 @@ public class Z {
 
         ClassA obj = new ClassA();
         obj.hello();
-        Arrays ArrayPractice = new Arrays();
-        int [] testArr = {2,5,155,7,47,14,8,0,38,6};
-        String [] testArr2 = {"123","3hn", "aaa", "BBB", "month", "123", "rfs", "123"};
-        ArrayPractice.ArrayElementsSum(testArr);
-        ArrayPractice.FindLowHight(testArr);
-        ArrayPractice.FindSecondLowHight(testArr);
-        ArrayPractice.Contains(testArr2, "12");
-        ArrayPractice.EvenOdd(testArr);
-        ArrayPractice.Sort(testArr, false);
+        FileHandling fh = new FileHandling();
+        fh.writeToFileBuffered("/Users/vitaliy_khairutdinov/IdeaProjects/id_01", "file_for_writing_test.txt", "write one more line");
+//        fh.writeToFile("/Users/vitaliy_khairutdinov/IdeaProjects/id_01", "file_for_writing_test.txt", "write line");
+//        fh.readFromFileBuffered("/Users/vitaliy_khairutdinov/Desktop/", "help_text.txt");
+//        fh.readFromFile("doesnot matter", "any");
+
+//        Arrays ArrayPractice = new Arrays();
+//        int [] testArr = {2,5,155,7,47,14,8,0,38,6};
+//        String [] testArr2 = {"123","3hn", "aaa", "BBB", "month", "123", "rfs", "123"};
+//        ArrayPractice.ArrayElementsSum(testArr);
+//        ArrayPractice.FindLowHight(testArr);
+//        ArrayPractice.FindSecondLowHight(testArr);
+//        ArrayPractice.Contains(testArr2, "12");
+//        ArrayPractice.EvenOdd(testArr);
+//        ArrayPractice.Sort(testArr, false);
 
 //        StringPractice Str = new StringPractice(" Hello my dear and my friend! hello", "Goodbye my dear Friend!", 4);
 //        Str.remSpaces();
