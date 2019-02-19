@@ -17,8 +17,14 @@ public class Z {
         ClassA obj = new ClassA();
         obj.hello();
         FilePractice fp = new FilePractice("/Users/vitaliy_khairutdinov/IdeaProjects/id_01", "file_1.txt", "file_2.txt", "result.txt");
-        fp.readOneWriteAnother();
-
+        fp.writeLastNLines(5, "lastN.txt");
+//        fp.writeFirstNLines(5, "firstN.txt");
+//        fp.convertToUpercase("uppercase.txt");
+//        fp.readOneWriteAnother("error");
+//        fp.displayLinesWithoutData("3");
+//        fp.displayOddLines(true);
+//        fp.readOneWriteAnother();
+//
 //        FileHandling fh = new FileHandling();
 //        fh.writeToFileBuffered("/Users/vitaliy_khairutdinov/IdeaProjects/id_01", "file_for_writing_test.txt", "write one more line");
 //        fh.writeToFile("/Users/vitaliy_khairutdinov/IdeaProjects/id_01", "file_for_writing_test.txt", "write line");
