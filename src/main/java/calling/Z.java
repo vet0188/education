@@ -1,5 +1,6 @@
 package calling;
 
+import Apache_POI.ExcelFileReading;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,20 +22,28 @@ public class Z {
 
         ClassA obj = new ClassA();
         obj.hello();
-        ChromeDriver driver = new ChromeDriver();
-        driver.get("https://app.observepointqa.com");
-        WebElement userName = driver.findElementByXPath("//*[@placeholder=\"Username\"]");
-        WebElement password = driver.findElementByXPath("//*[@placeholder=\"Password\"]");
-        userName.sendKeys("qa_vkh_std");
-        password.sendKeys("3E438f@3");
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"login\"]/div[1]/div/form/div/button")));
+        ExcelFileReading excel = new ExcelFileReading(); // more than 1 method can't be called at the same time?
+        excel.readAllDataFromCell("out");
+//        excel.readDataFromCell("out", 0, 1);
+//        excel.rowsCount("out", false);
+//        excel.cellCount("out", 2);
+
+
+//==========================================================
+//        ChromeDriver driver = new ChromeDriver();
+//        driver.get("https://app.observepointqa.com");
+//        WebElement userName = driver.findElementByXPath("//*[@placeholder=\"Username\"]");
+//        WebElement password = driver.findElementByXPath("//*[@placeholder=\"Password\"]");
+//        userName.sendKeys("qa_vkh_std");
+//        password.sendKeys("3E438f@3");
+//        WebDriverWait wait = new WebDriverWait(driver, 10);
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"login\"]/div[1]/div/form/div/button")));
 //        driver.findElement(By.xpath("//*[@id=\"login\"]/div[1]/div/form/div/button")).click();
-        WebElement signInButton = driver.findElementByXPath("//*[@id=\"login\"]/div[1]/div/form/div/button");
-        signInButton.click();
+//        WebElement signInButton = driver.findElementByXPath("//*[@id=\"login\"]/div[1]/div/form/div/button");
+//        signInButton.click();
 //        driver.getKeyboard().pressKey("return");
 
-
+//=========================================================
 //        FilePractice fp = new FilePractice("/Users/vitaliy_khairutdinov/IdeaProjects/id_01", "file_1.txt", "file_2.txt", "result.txt");
 //        fp.writeLastNLines(5, "lastN.txt");
 //        fp.writeFirstNLines(5, "firstN.txt");
