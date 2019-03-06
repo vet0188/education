@@ -1,6 +1,7 @@
 package calling;
 
 import Apache_POI.ExcelFileReading;
+import Apache_POI.ExcelFileWriting;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -22,8 +23,12 @@ public class Z {
 
         ClassA obj = new ClassA();
         obj.hello();
-        ExcelFileReading excel = new ExcelFileReading(); // more than 1 method can't be called at the same time?
-        excel.readAllDataFromCell("out");
+        ExcelPractice excel = new ExcelPractice();
+        excel.cloneDataFromFile();
+//        excel.writeData(1,2);
+
+//        ExcelFileReading excel = new ExcelFileReading(); // more than 1 method can't be called at the same time?
+//        excel.readAllDataFromCell("out");
 //        excel.readDataFromCell("out", 0, 1);
 //        excel.rowsCount("out", false);
 //        excel.cellCount("out", 2);
