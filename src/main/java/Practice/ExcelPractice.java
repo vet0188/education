@@ -1,10 +1,9 @@
 package Practice;
 
 import org.apache.poi.openxml4j.opc.OPCPackage;
-import org.apache.poi.xssf.usermodel.XSSFCell;
-import org.apache.poi.xssf.usermodel.XSSFRow;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.poi.ss.usermodel.*;
+
+import org.apache.poi.xssf.usermodel.*;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -22,6 +21,9 @@ public class ExcelPractice {
     String cellValueString;
     double cellValueInt;
     boolean cellValueBool;
+    XSSFCellStyle style = writeWK.createCellStyle();
+    style.setFillForegroundColor(IndexedColors.GREEN.getIndex());
+    style.setFillPattern(CellStyle.SOLID_FOREGROUND);
 
     public ExcelPractice() throws IOException {
 
@@ -84,6 +86,44 @@ public class ExcelPractice {
         XSSFRow writeRow = writeSheet.getRow(rowIndex);
         XSSFCell cell = writeRow.createCell(cellIndex);
         cell.setCellValue(data);
+    }
+    public void compareDataInTwoFiles ()
+    {
+        boolean equal = false;
+        XSSFSheet sheetFile1 = readWK.getSheet("Sheet1");
+        XSSFSheet sheetFile2 = writeWK.getSheet("Result2");
+        int rowCounterF1 = sheetFile1.getPhysicalNumberOfRows();
+        int rowCounterF2 = sheetFile2.getPhysicalNumberOfRows();
+            for (int rowIndex = 0; rowIndex <= rowCounterF1; rowIndex++) {
+                XSSFRow rowF1 = sheetFile1.getRow(rowIndex);
+                XSSFRow rowF2 = sheetFile2.getRow(rowIndex);
+                int cellCounterF1 = rowF1.getPhysicalNumberOfCells();
+                int cellCounterF2 = rowF2.getPhysicalNumberOfCells();
+                if (rowIndex <= rowCounterF2) {
+                    for (int cellIndex = 0; cellIndex <= cellCounterF1; cellIndex++) {
+                        XSSFCell cellF1 = rowF1.getCell(cellIndex);
+                        XSSFCell cellF2 = rowF2.getCell(cellIndex);
+                        if (cellIndex <= cellCounterF2) {
+                            if (cellF1.toString().compareTo(cellF2.toString()) != 0) cellF2.setCellStyle(style);
+                        }
+                        cellF2.setCellStyle(style);
+                    }
+                }
+                rowF2.setRowStyle(style);
+            }
+    }
+    // TO DO Sometime
+    public void readFromOneSheetWriteToAnother(){
+        // Implement method
+    }
+    public void readDataAndSkipErrors(){
+        // implement method
+    }
+    public void displayDataAlongWithRowAndCellIndex() {
+        // Implement method
+    }
+    public void displayMismatchRowAndCellIndexe() {
+        // Implement method
     }
 
 }
