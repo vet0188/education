@@ -22,8 +22,8 @@ public class ExcelPractice {
     double cellValueInt;
     boolean cellValueBool;
     XSSFCellStyle style = writeWK.createCellStyle();
-    style.setFillForegroundColor(IndexedColors.GREEN.getIndex());
-    style.setFillPattern(CellStyle.SOLID_FOREGROUND);
+//    style.setFillForegroundColor(IndexedColors.GREEN.getIndex());
+//    style.setFillPattern(CellStyle.SOLID_FOREGROUND);
 
     public ExcelPractice() throws IOException {
 
